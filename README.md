@@ -19,7 +19,6 @@ Date::isOnOrAfter($date, $compare_to) //true
 Date::isBefore($date, $compare_to) //false
 Date::isOnOrBefore($date, $compare_to) //false
 Date::isIdentical($date, $compare_to) //false
-?>
 ```
 
 ##How to format date:
