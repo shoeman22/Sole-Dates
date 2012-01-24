@@ -50,6 +50,44 @@ class Date {
     return static::AFTER;
   }
   
+  public static function difference($date, $compare_to, $field = null) {
+    $difference = static::getDifference($date, $compare_to);
+    $ret = array();
+    
+    $ret['seconds'] = $difference;
+    $ret['minutes'] = $ret['seconds'] / 60;
+    $ret['hours'] = $ret['minutes'] / 60;
+    $ret['days'] = $ret['hours'] / 24;
+    $ret['years'] = $ret['days'] / 365.2425;
+    $ret['months'] = $ret['years'] * 12;
+    
+    return $field ? $ret[$field] : $ret;
+  }
+  
+  public static function secondsDifferent($date, $compare_to) {
+    return static::difference($date, $compare_to, 'seconds');
+  }
+  
+  public static function minutesDifferent($date, $compare_to) {
+    return static::difference($date, $compare_to, 'minutes');
+  }
+  
+  public static function hoursDifferent($date, $compare_to) {
+    return static::difference($date, $compare_to, 'minutes');
+  }
+  
+  public static function daysDifferent($date, $compare_to) {
+    return static::difference($date, $compare_to, 'days');
+  }
+  
+  public static function monthsDifferent($date, $compare_to) {
+    return static::difference($date, $compare_to, 'months');
+  }
+  
+  public static function yearsDifferent($date, $compare_to) {
+    return static::difference($date, $compare_to, 'years');
+  }
+  
   public static function _add($date, $str, $format = null) {
     if(is_null($format)) $format = static::DATE_FORMAT;
     return date($format,strtotime(date($format,strtotime($date)) . $str));

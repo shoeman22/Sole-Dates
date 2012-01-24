@@ -30,6 +30,28 @@ $date = Date::addDays('2012-01-10',10);
 Date::format($date,'m/d/Y') //01/20/2014
 ```
 
+##How to get the difference between dates##
+```php
+
+$date = 2012-01-01
+$compare = 2012-01-12
+
+Date::difference($date, $compare))
+/*Array
+(
+    [seconds] => -950400
+    [minutes] => -15840
+    [hours] => -264
+    [days] => -11
+    [years] => -0.030116977076874
+    [months] => -0.36140372492248
+)*/
+
+Date::difference($date, $compare, "years") //-0.030116977076874)
+Date::yearsDifferent($date, $compare) //same
+
+```
+
 ##How to perform date math:##
 
 Date math works for any date format strtotime supports.  The main method is Date::add, but convenience methods Date::addUnits, Date::addDays, Date::addMonths, Date::addYears, Date::addHours, Date::addMinutes, Date::addSeconds are provided as well.  Note that even with non-date type calls such as Date::addMinutes only the date portion of the result is returned.

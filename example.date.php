@@ -38,6 +38,7 @@ echo 'Date::isOnOrAfter($date, $compare): (',Date::isOnOrAfter($date, $compare),
 
 echo "ADD TESTS\n=======================\n";
 echo "Add Units Test\n=======================\n";
+
 $date = '2012-01-01';
 $number = 10;
 $units = 'days';  //
@@ -61,4 +62,16 @@ echo '$units = ',$units,"\n\n";
 
 echo 'Date::addUnits($date, $number, $units): (',Date::addUnits($date, $number, $units),")\n";
 echo 'Date::addMonths($date, $number): (',Date::addMonths($date, $number),")\n";
-echo 'Date::add($date, $number . \' \' . $units): (',Date::add($date, $number . ' ' . $units),")\n";
+echo 'Date::add($date, $number . \' \' . $units): (',Date::add($date, $number . ' ' . $units),")\n\n";
+
+echo "DIFFERENCE TESTS\n=======================\n";
+$date = '2012-01-01';
+$compare = '2012-01-12';
+
+echo '$date = ',$date,"\n";
+echo '$compare = ',$compare,"\n\n";
+
+echo 'Date::difference($date, $compare))',"\n";
+print_r(Date::difference($date, $compare));
+echo "\n",'Date::difference($date, $compare, "years"): (',Date::difference($date, $compare, "years"),')';
+echo "\n",'Date::yearsDifferent($date, $compare): (',Date::yearsDifferent($date, $compare),')';

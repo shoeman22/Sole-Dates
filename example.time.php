@@ -70,3 +70,15 @@ echo 'Time::add($date, $number . \' \' . $units): (',Time::add($date, $number . 
 echo 'Date::addUnits($date, $number, $units, Date::TIME_FORMAT): (',Date::addUnits($date, $number, $units, Date::TIME_FORMAT),")\n";
 echo 'Date::addHours($date, $number, Date::TIME_FORMAT): (',Date::addHours($date, $number, Date::TIME_FORMAT),")\n";
 echo 'Date::add($date, $number . \' \' . $units, Date::TIME_FORMAT): (',Date::add($date, $number . ' ' . $units, Date::TIME_FORMAT),")\n\n";
+
+echo "DIFFERENCE TESTS\n=======================\n";
+$date = '11:30:12';
+$compare = '15:30:12';
+
+echo '$date = ',$date,"\n";
+echo '$compare = ',$compare,"\n\n";
+
+echo 'Date::difference($date, $compare))',"\n";
+print_r(Date::difference($date, $compare));
+echo "\n",'Date::difference($date, $compare, "minutes"): (',Date::difference($date, $compare, "minutes"),')';
+echo "\n",'Date::minutesDifferent($date, $compare): (',Date::minutesDifferent($date, $compare),')';
