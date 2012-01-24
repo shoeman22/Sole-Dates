@@ -65,7 +65,7 @@ Date::add($date, '10 minutes', Date::DATETIME_FORMAT);//same
 
 ##Optional: Time specific math
 
-Similar to Date math, but a full datetime string is returned (Y-m-d H:i:s).
+Similar to Date math, but a time string is returned (H:i:s).
 
 ```php
 $date = '10:40:00';
