@@ -24,7 +24,6 @@ Date::isIdentical($date, $compare_to) //false
 Date::format is meant to be used with the returns from the add method to get a prettier format for presentation.  Works with any strtotime parsable string, so the returns from Date_Time::add and Time::add also work.
 
 ```php
-
 $date = Date::addDays('2012-01-10',10);
 
 Date::format($date,'m/d/Y') //01/20/2014
@@ -35,7 +34,6 @@ Date::format($date,'m/d/Y') //01/20/2014
 Date::difference returns an array detailing how far off $date is from $compare.  If you just want a specific element, you can provide a $field option to difference, or use the convenience methods Date::yearsDifferent, Date::monthsDifferent, Date::daysDifferent, Date::hoursDifferend, Date::minutesDifferent, Date::secondsDifferent.
 
 ```php
-
 $date = 2012-01-01
 $compare = 2012-01-12
 
@@ -53,7 +51,6 @@ Date::difference($date, $compare))
 Date::difference($date, $compare, "years") //-0.030116977076874)
 Date::yearsDifferent($date, $compare) //same
 Date::_difference(Date::getDifference($date, $compare), "years") //same
-
 ```
 
 ##How to perform date math:##
