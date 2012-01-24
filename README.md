@@ -1,4 +1,4 @@
-# Sole Dates - Flexible date comparison and math classes for PHP.#
+# Sole Dates - Flexible PHP date comparison and math.#
 ##How to compare dates:##
 
 Date comparison works for any string strtotime can parse.  This allows for date formats like "YESTERDAY", "TODAY", or complex strings such as "2012-01-10 10:50 +4 days" along with standard date, datetime and time formats
