@@ -26,6 +26,7 @@ Date::isIdentical($date, $compare_to) //false
 Date::format is meant to be used with the returns from the add method to get a prettier format for presentation.  Works with any strtotime parsable string, so the returns from Date_Time::add and Time::add also work.
 
 ```php
+<?php
 $date = Date::addDays('2012-01-10',10);
 
 Date::format($date,'m/d/Y') //01/20/2014
@@ -54,7 +55,6 @@ Date::difference($date, $compare))
 Date::difference($date, $compare, "years") //-0.030116977076874)
 Date::yearsDifferent($date, $compare) //same
 Date::_difference(Date::getDifference($date, $compare), "years") //same
-?>
 ```
 
 ##How to perform date math:##
@@ -70,7 +70,6 @@ $units = 'days';
 Date::addDays($date, $number); //2014-01-11
 Date::addUnits($date, $number, $units); //same
 Date::add($date, '10 days'); //same
-?>
 ```
 
 ##Optional: Date_Time specific math
@@ -91,7 +90,6 @@ Date_Time::add($date, '10 minutes'); //same
 Date::addMinutes($date, $number, Date::DATETIME_FORMAT); //same
 Date::addUnits($date, $number, $units, Date::DATETIME_FORMAT);//same
 Date::add($date, '10 minutes', Date::DATETIME_FORMAT);//same
-?>
 ```
 
 ##Optional: Time specific math
@@ -112,5 +110,4 @@ Time::add($date, '10 minutes'); //same
 Date::addMinutes($date, $number, Date::TIME_FORMAT); //same
 Date::addUnits($date, $number, $units, Date::TIME_FORMAT);//same
 Date::add($date, '10 minutes', Date::TIME_FORMAT);//same
-?>
 ```
