@@ -82,3 +82,4 @@ echo 'Date::difference($date, $compare))',"\n";
 print_r(Date::difference($date, $compare));
 echo "\n",'Date::difference($date, $compare, "minutes"): (',Date::difference($date, $compare, "minutes"),')';
 echo "\n",'Date::minutesDifferent($date, $compare): (',Date::minutesDifferent($date, $compare),')';
+echo "\n",'Date::_difference(Date::getDifference($date, $compare), "minutes"): (',Date::_difference(Date::getDifference($date, $compare), "minutes"),')';

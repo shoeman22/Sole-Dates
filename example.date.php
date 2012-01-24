@@ -75,3 +75,4 @@ echo 'Date::difference($date, $compare))',"\n";
 print_r(Date::difference($date, $compare));
 echo "\n",'Date::difference($date, $compare, "years"): (',Date::difference($date, $compare, "years"),')';
 echo "\n",'Date::yearsDifferent($date, $compare): (',Date::yearsDifferent($date, $compare),')';
+echo "\n",'Date::_difference(Date::getDifference($date, $compare), "years"): (',Date::_difference(Date::getDifference($date, $compare), "years"),')';

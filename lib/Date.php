@@ -50,8 +50,7 @@ class Date {
     return static::AFTER;
   }
   
-  public static function difference($date, $compare_to, $field = null) {
-    $difference = static::getDifference($date, $compare_to);
+  public static function _difference($difference, $field = null) {
     $ret = array();
     
     $ret['seconds'] = $difference;
@@ -62,6 +61,10 @@ class Date {
     $ret['months'] = $ret['years'] * 12;
     
     return $field ? $ret[$field] : $ret;
+  }
+  
+  public static function difference($date, $compare_to, $field = null) {
+    return static::_difference(static::getDifference($date, $compare_to), $field);
   }
   
   public static function secondsDifferent($date, $compare_to) {
