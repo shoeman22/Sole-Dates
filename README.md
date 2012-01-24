@@ -52,7 +52,7 @@ Date::difference($date, $compare))
 
 Date::difference($date, $compare, "years") //-0.030116977076874)
 Date::yearsDifferent($date, $compare) //same
-Date::_difference(Date::getDifference($date, $compare), "years"): (-0.030116977076874)
+Date::_difference(Date::getDifference($date, $compare), "years") //same
 
 ```
 
