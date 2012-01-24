@@ -8,6 +8,11 @@ class Date {
   const DATETIME_FORMAT = 'Y-m-d H:i:s';
   const TIME_FORMAT = 'H:i:s';
   
+  public static function format($date, $format = null) {
+    if(is_null($format)) $format = static::DATE_FORMAT;
+    return date($format, strtotime($date));
+  }
+  
   public static function getDifference($date, $compare_to) {
     return strtotime($date) - strtotime($compare_to);
   }
